@@ -1,24 +1,51 @@
 {
   "expo": {
-    "name": "AccountManager",
+    "name": "Account Manager",
     "slug": "AccountManager",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.accountmanager.ledger"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+        "backgroundColor": "#1565C0",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "package": "com.accountmanager.ledger",
+      "permissions": []
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": false,
+          "useSQLCipher": false
+        }
+      ],
+      [
+  "expo-splash-screen",
+  {
+    "backgroundColor": "#1565C0",
+    "image": "./assets/splash-icon.png",
+    "imageWidth": 200
+  }
+]
+,
+      "expo-sharing",
+      "expo-status-bar",
+      "@react-native-community/datetimepicker"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0990a2e9-5ad1-4846-8704-c470b33c42ee"
+      }
     }
   }
 }
